@@ -28,5 +28,9 @@ class Card{
         }
     }
     
+    func getImage() -> String{
+        return self.image
+    }
+    
     
 }
