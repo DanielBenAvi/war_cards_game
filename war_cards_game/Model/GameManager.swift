@@ -136,6 +136,9 @@ class GameManager{
             direction = Direction.player_right_direction
             
         }else{
+            
+            // todo: recursive war
+            
             direction = war(pc1: pc1, pc2: pc2)
         }
         

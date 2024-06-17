@@ -17,85 +17,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-00-qud" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="BTv-Bu-UvK" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="3000" height="393"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nTq-Oc-J9A" userLabel="Board">
-                                <rect key="frame" x="109" y="100" width="634.66666666666663" height="216"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-deck" id="reD-XH-AdR">
-                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tar-e6-8AA">
-                                        <rect key="frame" x="162.66666666666669" y="0.0" width="146.66666666666669" height="216"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NrO-qq-Qjx">
-                                        <rect key="frame" x="325.33333333333331" y="0.0" width="146.66666666666669" height="216"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-deck-2" translatesAutoresizingMaskIntoConstraints="NO" id="FId-ca-yKh">
-                                        <rect key="frame" x="488.00000000000006" y="0.0" width="146.66666666666669" height="216"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-6Y-oSc">
-                                <rect key="frame" x="376" y="324" width="100" height="40"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start Turn"/>
-                                <connections>
-                                    <action selector="makeTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wk3-EJ-hK2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-pE-0VD">
-                                <rect key="frame" x="337.66666666666669" y="16.000000000000004" width="176.66666666666669" height="38.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" name="LabelColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-ya-0kX">
+                                <rect key="frame" x="67" y="8" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="TlN-Tg-bIq"/>
+                                    <constraint firstAttribute="height" constant="36" id="gGW-X5-tVV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="my_label_color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="342" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-ae-1Cu" userLabel="Labels">
-                                <rect key="frame" x="108.66666666666669" y="70.333333333333329" width="634.66666666666652" height="21.666666666666671"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LcN-Yv-RJI" userLabel="BaseStack">
+                                <rect key="frame" x="59" y="0.0" width="734.66666666666663" height="372"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-He-cbO">
-                                        <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="21.666666666666668"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <color key="textColor" name="LabelColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-pE-0VD">
+                                        <rect key="frame" x="265.33333333333331" y="0.0" width="204" height="134.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <color key="textColor" name="my_label_color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-37-wBd">
-                                        <rect key="frame" x="488.33333333333331" y="0.0" width="146.33333333333331" height="21.666666666666668"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <color key="textColor" name="LabelColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="342" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-ae-1Cu" userLabel="Labels">
+                                        <rect key="frame" x="138.33333333333337" y="142.33333333333334" width="458" height="21.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-He-cbO">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <color key="textColor" name="my_label_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-37-wBd">
+                                                <rect key="frame" x="400" y="0.0" width="58" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <color key="textColor" name="my_label_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VJo-37-wBd" firstAttribute="width" secondItem="SYf-He-cbO" secondAttribute="width" id="cWl-yR-oHn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nTq-Oc-J9A" userLabel="Board">
+                                        <rect key="frame" x="0.0" y="172" width="734.66666666666663" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-deck" id="reD-XH-AdR">
+                                                <rect key="frame" x="0.0" y="-67" width="172" height="334"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tar-e6-8AA">
+                                                <rect key="frame" x="187.66666666666669" y="0.0" width="171.66666666666669" height="200"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NrO-qq-Qjx">
+                                                <rect key="frame" x="375.33333333333331" y="0.0" width="171.66666666666669" height="200"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-deck-2" translatesAutoresizingMaskIntoConstraints="NO" id="FId-ca-yKh">
+                                                <rect key="frame" x="563" y="0.0" width="171.66666666666663" height="200"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Ldu-Ad-gTV"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="VJo-37-wBd" firstAttribute="width" secondItem="SYf-He-cbO" secondAttribute="width" id="cWl-yR-oHn"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nTq-Oc-J9A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Dxi-uB-FvG"/>
-                            <constraint firstAttribute="bottom" secondItem="ajk-00-qud" secondAttribute="bottom" id="E7M-0b-Ocf"/>
-                            <constraint firstItem="6Zn-6Y-oSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H13-EH-V3P"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTq-Oc-J9A" secondAttribute="trailing" constant="50" id="IbL-DH-0eF"/>
-                            <constraint firstItem="dJi-ae-1Cu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTj-Tz-Kiz"/>
-                            <constraint firstItem="6Zn-6Y-oSc" firstAttribute="top" secondItem="nTq-Oc-J9A" secondAttribute="bottom" constant="8" id="USh-5T-b2u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTq-Oc-J9A" secondAttribute="bottom" constant="50" id="VDD-xJ-IRG"/>
-                            <constraint firstItem="ajk-00-qud" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bFR-kA-s93"/>
-                            <constraint firstItem="nTq-Oc-J9A" firstAttribute="top" secondItem="dJi-ae-1Cu" secondAttribute="bottom" constant="8" id="csm-z0-Nfy"/>
-                            <constraint firstItem="dJi-ae-1Cu" firstAttribute="width" secondItem="nTq-Oc-J9A" secondAttribute="width" id="dAh-pF-ZQw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Zn-6Y-oSc" secondAttribute="bottom" constant="8" id="ed4-Dj-11U"/>
-                            <constraint firstAttribute="trailing" secondItem="ajk-00-qud" secondAttribute="trailing" id="gbb-ia-HgT"/>
-                            <constraint firstItem="nTq-Oc-J9A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="gjv-hN-R5O"/>
-                            <constraint firstItem="YrQ-pE-0VD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijq-u6-SvN"/>
-                            <constraint firstItem="dJi-ae-1Cu" firstAttribute="top" secondItem="YrQ-pE-0VD" secondAttribute="bottom" constant="16" id="psy-vq-JCl"/>
-                            <constraint firstItem="ajk-00-qud" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wvQ-A2-9oc"/>
-                            <constraint firstItem="YrQ-pE-0VD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="yIL-iH-aPo"/>
+                            <constraint firstItem="ghR-ya-0kX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2yF-JH-krJ"/>
+                            <constraint firstItem="BTv-Bu-UvK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3tt-Qj-S9E"/>
+                            <constraint firstItem="BTv-Bu-UvK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yc-pe-pgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LcN-Yv-RJI" secondAttribute="trailing" id="ReX-Pe-dCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LcN-Yv-RJI" secondAttribute="bottom" id="XIE-Ek-YdZ"/>
+                            <constraint firstAttribute="bottom" secondItem="BTv-Bu-UvK" secondAttribute="bottom" id="dfQ-in-UbL"/>
+                            <constraint firstItem="ghR-ya-0kX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="pHg-Zy-O0r"/>
+                            <constraint firstAttribute="trailing" secondItem="BTv-Bu-UvK" secondAttribute="trailing" id="rYQ-xi-gfT"/>
+                            <constraint firstItem="LcN-Yv-RJI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vAQ-z1-Ilv"/>
+                            <constraint firstItem="LcN-Yv-RJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zwm-zs-lEw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="ghR-ya-0kX" id="N1j-xF-92F"/>
                         <outlet property="gameLabel" destination="YrQ-pE-0VD" id="cMI-xZ-10E"/>
                         <outlet property="leftDeck" destination="reD-XH-AdR" id="ryL-sL-fak"/>
                         <outlet property="leftLabel" destination="SYf-He-cbO" id="kbI-wQ-MDg"/>
@@ -103,7 +107,6 @@
                         <outlet property="rightDeck" destination="FId-ca-yKh" id="qw2-k5-YHx"/>
                         <outlet property="rightLabel" destination="VJo-37-wBd" id="jjW-Va-FsH"/>
                         <outlet property="rightPlayerImage" destination="NrO-qq-Qjx" id="dYZ-nU-ZdL"/>
-                        <outlet property="turnButton" destination="6Zn-6Y-oSc" id="qjp-Hs-38J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,7 +118,7 @@
         <image name="Background" width="3000" height="2000"/>
         <image name="card-deck" width="512" height="512"/>
         <image name="card-deck-2" width="512" height="512"/>
-        <namedColor name="LabelColor">
+        <namedColor name="my_label_color">
             <color red="0.80000000000000004" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
