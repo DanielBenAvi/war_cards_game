@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,10 +13,13 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="war_cards_game" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-00-qud" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nTq-Oc-J9A" userLabel="Board">
                                 <rect key="frame" x="109" y="100" width="634.66666666666663" height="216"/>
                                 <subviews>
@@ -35,7 +39,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-6Y-oSc">
-                                <rect key="frame" x="376.33333333333331" y="324" width="100" height="34.333333333333314"/>
+                                <rect key="frame" x="376" y="324" width="100" height="40"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start Turn"/>
                                 <connections>
@@ -43,24 +47,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-pE-0VD">
-                                <rect key="frame" x="347.66666666666669" y="16" width="157.33333333333331" height="27.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="337.66666666666669" y="16.000000000000004" width="176.66666666666669" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" name="LabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="342" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-ae-1Cu" userLabel="Labels">
-                                <rect key="frame" x="109" y="70.333333333333329" width="634.66666666666663" height="21.666666666666671"/>
+                                <rect key="frame" x="108.66666666666669" y="70.333333333333329" width="634.66666666666652" height="21.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-He-cbO">
                                         <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="LabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJo-37-wBd">
                                         <rect key="frame" x="488.33333333333331" y="0.0" width="146.33333333333331" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="LabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -73,15 +77,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nTq-Oc-J9A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Dxi-uB-FvG"/>
+                            <constraint firstAttribute="bottom" secondItem="ajk-00-qud" secondAttribute="bottom" id="E7M-0b-Ocf"/>
                             <constraint firstItem="6Zn-6Y-oSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H13-EH-V3P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTq-Oc-J9A" secondAttribute="trailing" constant="50" id="IbL-DH-0eF"/>
                             <constraint firstItem="dJi-ae-1Cu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTj-Tz-Kiz"/>
                             <constraint firstItem="6Zn-6Y-oSc" firstAttribute="top" secondItem="nTq-Oc-J9A" secondAttribute="bottom" constant="8" id="USh-5T-b2u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTq-Oc-J9A" secondAttribute="bottom" constant="50" id="VDD-xJ-IRG"/>
+                            <constraint firstItem="ajk-00-qud" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bFR-kA-s93"/>
                             <constraint firstItem="nTq-Oc-J9A" firstAttribute="top" secondItem="dJi-ae-1Cu" secondAttribute="bottom" constant="8" id="csm-z0-Nfy"/>
                             <constraint firstItem="dJi-ae-1Cu" firstAttribute="width" secondItem="nTq-Oc-J9A" secondAttribute="width" id="dAh-pF-ZQw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Zn-6Y-oSc" secondAttribute="bottom" constant="8" id="ed4-Dj-11U"/>
+                            <constraint firstAttribute="trailing" secondItem="ajk-00-qud" secondAttribute="trailing" id="gbb-ia-HgT"/>
                             <constraint firstItem="nTq-Oc-J9A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="gjv-hN-R5O"/>
                             <constraint firstItem="YrQ-pE-0VD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijq-u6-SvN"/>
+                            <constraint firstItem="dJi-ae-1Cu" firstAttribute="top" secondItem="YrQ-pE-0VD" secondAttribute="bottom" constant="16" id="psy-vq-JCl"/>
+                            <constraint firstItem="ajk-00-qud" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wvQ-A2-9oc"/>
                             <constraint firstItem="YrQ-pE-0VD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="yIL-iH-aPo"/>
                         </constraints>
                     </view>
@@ -102,8 +112,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="3000" height="2000"/>
         <image name="card-deck" width="512" height="512"/>
         <image name="card-deck-2" width="512" height="512"/>
+        <namedColor name="LabelColor">
+            <color red="0.80000000000000004" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
