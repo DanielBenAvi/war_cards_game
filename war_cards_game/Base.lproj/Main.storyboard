@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <device id="retina6_12" orientation="landscape" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -18,12 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="BTv-Bu-UvK" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="3000" height="393"/>
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-ya-0kX">
-                                <rect key="frame" x="67" y="8" width="36" height="36"/>
+                                <rect key="frame" x="67" y="8" width="13.333333333333329" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="TlN-Tg-bIq"/>
                                     <constraint firstAttribute="height" constant="36" id="gGW-X5-tVV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -88,6 +87,7 @@
                         <constraints>
                             <constraint firstItem="ghR-ya-0kX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2yF-JH-krJ"/>
                             <constraint firstItem="BTv-Bu-UvK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3tt-Qj-S9E"/>
+                            <constraint firstItem="ghR-ya-0kX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5s7-kN-80h"/>
                             <constraint firstItem="BTv-Bu-UvK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yc-pe-pgc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LcN-Yv-RJI" secondAttribute="trailing" id="ReX-Pe-dCs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LcN-Yv-RJI" secondAttribute="bottom" id="XIE-Ek-YdZ"/>
