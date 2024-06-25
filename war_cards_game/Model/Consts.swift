@@ -17,9 +17,11 @@ public enum Direction{
 
 let SMALL_SCALE: Double = 0.5
 let ANIMATION_DURATION: Double = 0.5
+let FLIP_ANIMATION_DURATION: Double = ANIMATION_DURATION // 3
 let Z_POSITION: Double = 1
 let EMPTY_IMAGE = UIImage(named: "empty")
 let NUBER_OF_PLAYERS: Int = 2
 let TIME_COUNT: Double = 1.0
 let TIME_INTERVAL_ACTION: Double = 2.0
+
 

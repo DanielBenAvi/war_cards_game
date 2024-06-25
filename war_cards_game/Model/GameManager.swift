@@ -12,6 +12,7 @@ class GameManager{
     var cards: [Card]
     var leftPlayer: Player
     var rightPlayer: Player
+    var warCards: [Card]
     
     init() {
         self.cards = [
@@ -84,6 +85,8 @@ class GameManager{
             
         self.leftPlayer = Player(name: "Left Player", cards: leftPlayerCards) // left
         self.rightPlayer = Player(name: "Right Player", cards: rightPlayerCards) // right
+        
+        self.warCards = [Card]()
     }
     
     func makeTurn() -> Direction{
@@ -104,6 +107,7 @@ class GameManager{
         }
         else
         {
+            // reset the war cards
             direction = war(pc1: left_open_card, pc2: right_open_card)
         }
         
@@ -111,34 +115,38 @@ class GameManager{
     }
     
     func war(pc1:Card, pc2:Card) -> Direction{
-        var cards = [Card]()
-        cards.append(pc1)
-        cards.append(pc2)
+        self.warCards = [pc1, pc2]
         
         var direction = Direction.default_direction
         
-        // get 3 cards from each player
-        for _ in 0..<3{
-            cards.append(self.leftPlayer.getCard())
-            cards.append(self.rightPlayer.getCard())
+        // get 3 cards from each player if they have enough cards
+        let leftPlayerCards = self.leftPlayer.cards.count >= 3 ? 3 : self.leftPlayer.cards.count
+        let rightPlayerCards = self.rightPlayer.cards.count >= 3 ? 3 : self.rightPlayer.cards.count
+        
+        for _ in 0..<rightPlayerCards{
+            warCards.append(self.rightPlayer.getCard())
+        }
+        
+        for _ in 0..<leftPlayerCards{
+            warCards.append(self.leftPlayer.getCard())
         }
         
         // compare the last card
         let pc1 = self.leftPlayer.getCard()
         let pc2 = self.rightPlayer.getCard()
         
+        self.warCards.append(pc1)
+        self.warCards.append(pc2)
+        
         if pc1.compare(card: pc2) == 1{
-            self.leftPlayer.addCards(cards: cards)
+            self.leftPlayer.addCards(cards: self.warCards)
             direction = Direction.player_left_direction
             
         }else if pc1.compare(card: pc2) == -1{
-            self.rightPlayer.addCards(cards: cards)
+            self.rightPlayer.addCards(cards: self.warCards)
             direction = Direction.player_right_direction
             
         }else{
-            
-            // todo: recursive war
-            
             direction = war(pc1: pc1, pc2: pc2)
         }
         
@@ -149,14 +157,6 @@ class GameManager{
         return self.leftPlayer.cards.count == 0 || self.rightPlayer.cards.count == 0
     }
     
-    func getGameStatus() -> String{
-        if self.leftPlayer.getCardScore() > self.rightPlayer.getCardScore(){
-            return "Left Player is won the round"
-        }
-        if self.rightPlayer.getCardScore() > self.leftPlayer.getCardScore(){
-            return "Right Player is won the round"
-        }
-        return "War!"
-    }
+
     
 }
