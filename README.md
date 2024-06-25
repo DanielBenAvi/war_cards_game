@@ -26,18 +26,14 @@ The Game is Played Automatically By The Computer.
 ## Light Mode
 
 
-
-Uploading RPReplay_Final1719330179.MP4…
-
-
+Uploading RPReplay_Final1719330179.mov…
 
 
 
 ## Dark Mode
 
 
-
-https://github.com/DanielBenAvi/war_cards_game/assets/94143762/230949f3-616b-4c1c-a5bd-27af2e5591fb
+Uploading RPReplay_Final1719329977-1.mov…
 
 
 
