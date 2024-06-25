@@ -15,6 +15,7 @@ The Game is Played Automatically By The Computer.
 6. The player with the higher card wins all the cards.
 7. If the cards are equal, the process is repeated until a player wins.
 8. The game ends when one player has all the cards.
+9. You can pause the game at any time
 
 
 ## Technologies
@@ -25,7 +26,10 @@ The Game is Played Automatically By The Computer.
 ## Light Mode
 
 
-https://github.com/DanielBenAvi/war_cards_game/assets/94143762/0530f3e9-423e-475a-9fc3-d05766e25a26
+
+Uploading RPReplay_Final1719330179.MP4…
+
+
 
 
 
@@ -33,7 +37,10 @@ https://github.com/DanielBenAvi/war_cards_game/assets/94143762/0530f3e9-423e-475
 
 
 
-https://github.com/DanielBenAvi/war_cards_game/assets/94143762/938bf163-9514-4b0d-8f98-9d933f7550da
+https://github.com/DanielBenAvi/war_cards_game/assets/94143762/230949f3-616b-4c1c-a5bd-27af2e5591fb
+
+
+
 
 ## Creator
 
