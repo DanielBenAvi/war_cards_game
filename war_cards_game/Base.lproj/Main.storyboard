@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="BTv-Bu-UvK" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                                <rect key="frame" x="0.0" y="0.0" width="3000" height="393"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-ya-0kX">
-                                <rect key="frame" x="67" y="8" width="13.333333333333329" height="36"/>
+                                <rect key="frame" x="67" y="8" width="2866" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="gGW-X5-tVV"/>
                                 </constraints>
@@ -81,6 +81,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-MZ-EMr">
+                                <rect key="frame" x="69" y="54" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Sq1-Sc-BW9"/>
+                                    <constraint firstAttribute="height" constant="100" id="mxI-eN-cSw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pause"/>
+                                <connections>
+                                    <action selector="pauseGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vde-Ud-4Lr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,8 +101,10 @@
                             <constraint firstItem="BTv-Bu-UvK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3tt-Qj-S9E"/>
                             <constraint firstItem="ghR-ya-0kX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5s7-kN-80h"/>
                             <constraint firstItem="BTv-Bu-UvK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yc-pe-pgc"/>
+                            <constraint firstItem="eqd-MZ-EMr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Lgf-HN-KAz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LcN-Yv-RJI" secondAttribute="trailing" id="ReX-Pe-dCs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LcN-Yv-RJI" secondAttribute="bottom" id="XIE-Ek-YdZ"/>
+                            <constraint firstItem="eqd-MZ-EMr" firstAttribute="top" secondItem="ghR-ya-0kX" secondAttribute="bottom" constant="10" id="aWJ-IN-cnC"/>
                             <constraint firstAttribute="bottom" secondItem="BTv-Bu-UvK" secondAttribute="bottom" id="dfQ-in-UbL"/>
                             <constraint firstItem="ghR-ya-0kX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="pHg-Zy-O0r"/>
                             <constraint firstAttribute="trailing" secondItem="BTv-Bu-UvK" secondAttribute="trailing" id="rYQ-xi-gfT"/>
@@ -104,6 +118,7 @@
                         <outlet property="leftDeck" destination="reD-XH-AdR" id="ryL-sL-fak"/>
                         <outlet property="leftLabel" destination="SYf-He-cbO" id="kbI-wQ-MDg"/>
                         <outlet property="leftPlayerImage" destination="Tar-e6-8AA" id="eJS-iZ-IYu"/>
+                        <outlet property="play_pause_btn" destination="eqd-MZ-EMr" id="rEN-x9-vyP"/>
                         <outlet property="rightDeck" destination="FId-ca-yKh" id="qw2-k5-YHx"/>
                         <outlet property="rightLabel" destination="VJo-37-wBd" id="jjW-Va-FsH"/>
                         <outlet property="rightPlayerImage" destination="NrO-qq-Qjx" id="dYZ-nU-ZdL"/>
@@ -118,8 +133,9 @@
         <image name="Background" width="3000" height="2000"/>
         <image name="card-deck" width="512" height="512"/>
         <image name="card-deck-2" width="512" height="512"/>
+        <image name="pause" width="24" height="24"/>
         <namedColor name="my_label_color">
-            <color red="0.80000000000000004" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.80000001192092896" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

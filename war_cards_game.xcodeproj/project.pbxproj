@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D41F39D22C20912D0090FE06 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F39D12C20912D0090FE06 /* Consts.swift */; };
+		D42DE7582C2AEC8F0085ED60 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DE7572C2AEC8F0085ED60 /* Counter.swift */; };
 		D4C06DCB2C204869009C262D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCA2C204869009C262D /* AppDelegate.swift */; };
 		D4C06DCD2C204869009C262D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCC2C204869009C262D /* SceneDelegate.swift */; };
 		D4C06DCF2C204869009C262D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCE2C204869009C262D /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		D41F39D12C20912D0090FE06 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		D42DE7572C2AEC8F0085ED60 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		D4C06DC72C204869009C262D /* war_cards_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = war_cards_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C06DCA2C204869009C262D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C06DCC2C204869009C262D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				D4C06DD02C204869009C262D /* Main.storyboard */,
 				D4C06DD52C20486A009C262D /* LaunchScreen.storyboard */,
 				D4C06DD82C20486A009C262D /* Info.plist */,
+				D42DE7572C2AEC8F0085ED60 /* Counter.swift */,
 			);
 			path = war_cards_game;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42DE7582C2AEC8F0085ED60 /* Counter.swift in Sources */,
 				D4C06DCF2C204869009C262D /* ViewController.swift in Sources */,
 				D4C06DE52C205492009C262D /* GameManager.swift in Sources */,
 				D4C06DCB2C204869009C262D /* AppDelegate.swift in Sources */,
@@ -316,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTDPN9D53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = war_cards_game/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
@@ -344,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTDPN9D53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = war_cards_game/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";

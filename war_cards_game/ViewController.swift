@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var counterLabel: UILabel!
     
+    @IBOutlet weak var play_pause_btn: UIButton!
+    
     var gameManager = GameManager()
     var turnStatus = 0
     
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
     var timer: Timer?
     var counter = 0
     
+    var counterManager = Counter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,41 +51,17 @@ class ViewController: UIViewController {
         
         updateLabels(gameLabelText: "Press Start Turn to begin")
         
-        timer?.invalidate() // stop the timer
-        timer = Timer.scheduledTimer(timeInterval: TIME_COUNT, target: self, selector: #selector(updateTimerUI), userInfo: nil, repeats: true)
+        counterManager.delegate = self
+        counterManager.startCounter()
         
-        timer = Timer.scheduledTimer(timeInterval: TIME_INTERVAL_ACTION, target: self, selector: #selector(autoPlayer), userInfo: nil, repeats: true)
-        
-    }
-    
-    @objc func updateTimerUI() {
-        counter += 1
-        counterLabel.text = "\(counter)"
-    }
-    
-    
-    @objc func autoPlayer() {
-        if turnStatus % NUBER_OF_PLAYERS == 0{
-            startTurn()
-        } else {
-            endTurn()
-        }
     }
     
     
     
     deinit {
-        timer?.invalidate()
+        counterManager.stopCounter()
     }
 
-    @IBAction func makeTurn(_ sender: Any) {
-        if turnStatus % NUBER_OF_PLAYERS == 0{
-            startTurn()
-        } else {
-            endTurn()
-        }
-        
-    }
     
     func updateLabels(gameLabelText: String){
         leftLabel.text = "\(self.gameManager.leftPlayer.name) \(gameManager.leftPlayer.getScore())"
@@ -94,7 +73,6 @@ class ViewController: UIViewController {
        
     func startTurn() {
         updateLabels(gameLabelText: "Press End Turn to finish")
-
         animateStartTurn()
         turnStatus += 1
     }
@@ -105,6 +83,17 @@ class ViewController: UIViewController {
         }
         updateLabels(gameLabelText: gameManager.getGameStatus())
         turnStatus += 1
+    }
+    
+    
+    @IBAction func pauseGame(_ sender: Any) {
+        if counterManager.isPaused {
+            counterManager.resumeCounter()
+            play_pause_btn.setImage(UIImage(named: "pause"), for: .normal)
+        } else {
+            counterManager.pauseCounter()
+            play_pause_btn.setImage(UIImage(named: "play"), for: .normal)
+        }
     }
     
     func animateStartTurn() {
@@ -170,5 +159,20 @@ class ViewController: UIViewController {
     }
 
     
+}
+
+extension ViewController: CounterDelegate {
+    func cb_autoPlayer() {
+        if turnStatus % NUBER_OF_PLAYERS == 0{
+            startTurn()
+        } else {
+            endTurn()
+        }
+    }
+    
+    
+    func cb_updateCounterLabel(with count: Int) {
+        counterLabel.text = "\(count)"
+    }
 }
 

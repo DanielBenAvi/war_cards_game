@@ -19,14 +19,11 @@ class Player{
     
     func getCard() -> Card{
         let card = self.cards.removeFirst()
-        print("\(self.name) removed a card - now has \(self.cards.count) cards")
         return card
     }
     
     func addCards(cards: [Card]){
-        print("Before adding cards, \(self.name) has \(self.cards.count) cards")
         self.cards.append(contentsOf: cards)
-        print("After adding cards, \(self.name) has \(self.cards.count) cards\n")
     }
     
     func getCardName() -> String{
