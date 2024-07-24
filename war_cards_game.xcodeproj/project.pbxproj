@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		D41F39D22C20912D0090FE06 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F39D12C20912D0090FE06 /* Consts.swift */; };
 		D42DE7582C2AEC8F0085ED60 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42DE7572C2AEC8F0085ED60 /* Counter.swift */; };
+		D447BCC12C50CC180076EEDB /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447BCC02C50CC180076EEDB /* ViewControllerStart.swift */; };
+		D447BCC32C50CFFD0076EEDB /* ViewControllerEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447BCC22C50CFFD0076EEDB /* ViewControllerEnd.swift */; };
+		D447BCC52C50E23F0076EEDB /* ViewControllerGameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447BCC42C50E23F0076EEDB /* ViewControllerGameAnimation.swift */; };
 		D4C06DCB2C204869009C262D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCA2C204869009C262D /* AppDelegate.swift */; };
 		D4C06DCD2C204869009C262D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCC2C204869009C262D /* SceneDelegate.swift */; };
-		D4C06DCF2C204869009C262D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCE2C204869009C262D /* ViewController.swift */; };
+		D4C06DCF2C204869009C262D /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06DCE2C204869009C262D /* ViewControllerGame.swift */; };
 		D4C06DD22C204869009C262D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D4C06DD12C204869009C262D /* Base */; };
 		D4C06DD42C20486A009C262D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C06DD32C20486A009C262D /* Assets.xcassets */; };
 		D4C06DD72C20486A009C262D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D4C06DD62C20486A009C262D /* Base */; };
@@ -23,10 +26,13 @@
 /* Begin PBXFileReference section */
 		D41F39D12C20912D0090FE06 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		D42DE7572C2AEC8F0085ED60 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		D447BCC02C50CC180076EEDB /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
+		D447BCC22C50CFFD0076EEDB /* ViewControllerEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnd.swift; sourceTree = "<group>"; };
+		D447BCC42C50E23F0076EEDB /* ViewControllerGameAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGameAnimation.swift; sourceTree = "<group>"; };
 		D4C06DC72C204869009C262D /* war_cards_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = war_cards_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C06DCA2C204869009C262D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C06DCC2C204869009C262D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4C06DCE2C204869009C262D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4C06DCE2C204869009C262D /* ViewControllerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
 		D4C06DD12C204869009C262D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4C06DD32C20486A009C262D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C06DD62C20486A009C262D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D447BCBF2C50CB8C0076EEDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D447BCC62C50E2F10076EEDB /* Animation */,
+				D4C06DCE2C204869009C262D /* ViewControllerGame.swift */,
+				D447BCC02C50CC180076EEDB /* ViewControllerStart.swift */,
+				D447BCC22C50CFFD0076EEDB /* ViewControllerEnd.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D447BCC62C50E2F10076EEDB /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				D447BCC42C50E23F0076EEDB /* ViewControllerGameAnimation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		D4C06DBE2C204869009C262D = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +91,10 @@
 		D4C06DC92C204869009C262D /* war_cards_game */ = {
 			isa = PBXGroup;
 			children = (
+				D447BCBF2C50CB8C0076EEDB /* Controllers */,
 				D4C06DE12C20526D009C262D /* Model */,
 				D4C06DCA2C204869009C262D /* AppDelegate.swift */,
 				D4C06DCC2C204869009C262D /* SceneDelegate.swift */,
-				D4C06DCE2C204869009C262D /* ViewController.swift */,
 				D4C06DD32C20486A009C262D /* Assets.xcassets */,
 				D4C06DD02C204869009C262D /* Main.storyboard */,
 				D4C06DD52C20486A009C262D /* LaunchScreen.storyboard */,
@@ -162,10 +187,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42DE7582C2AEC8F0085ED60 /* Counter.swift in Sources */,
-				D4C06DCF2C204869009C262D /* ViewController.swift in Sources */,
+				D4C06DCF2C204869009C262D /* ViewControllerGame.swift in Sources */,
+				D447BCC32C50CFFD0076EEDB /* ViewControllerEnd.swift in Sources */,
+				D447BCC12C50CC180076EEDB /* ViewControllerStart.swift in Sources */,
 				D4C06DE52C205492009C262D /* GameManager.swift in Sources */,
 				D4C06DCB2C204869009C262D /* AppDelegate.swift in Sources */,
 				D4C06DCD2C204869009C262D /* SceneDelegate.swift in Sources */,
+				D447BCC52C50E23F0076EEDB /* ViewControllerGameAnimation.swift in Sources */,
 				D41F39D22C20912D0090FE06 /* Consts.swift in Sources */,
 				D4C06DE32C205284009C262D /* Player.swift in Sources */,
 				D4C06DDF2C205194009C262D /* Card.swift in Sources */,

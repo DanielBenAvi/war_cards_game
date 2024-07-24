@@ -8,7 +8,7 @@
 import Foundation
 
 class Player{
-    let name: String
+    var name: String
     var cards: [Card]
     
     init(name: String, cards: [Card]){
@@ -36,6 +36,10 @@ class Player{
     
     func getCardScore() -> Int{
         return self.cards[0].power
+    }
+    
+    func setName(name: String){
+        self.name = name
     }
     
 }

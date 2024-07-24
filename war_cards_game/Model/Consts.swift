@@ -23,5 +23,7 @@ let EMPTY_IMAGE = UIImage(named: "empty")
 let NUBER_OF_PLAYERS: Int = 2
 let TIME_COUNT: Double = 1.0
 let TIME_INTERVAL_ACTION: Double = 2.0
+let MAX_TURNS: Int = 10
+let CENTER_Y_CONSTRAINT: Double = 34.817549168324334
 
 

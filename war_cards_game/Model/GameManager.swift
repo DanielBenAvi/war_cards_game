@@ -13,6 +13,8 @@ class GameManager{
     var leftPlayer: Player
     var rightPlayer: Player
     var warCards: [Card]
+    var turnNumber: Int = 0
+    
     
     init() {
         self.cards = [
@@ -154,7 +156,18 @@ class GameManager{
     }
     
     func isGameOver() -> Bool{
-        return self.leftPlayer.cards.count == 0 || self.rightPlayer.cards.count == 0
+        return self.leftPlayer.cards.count == 0 || self.rightPlayer.cards.count == 0 || self.turnNumber == MAX_TURNS
+    }
+    
+    
+    func getWinner() -> Player{
+        if self.leftPlayer.cards.count > self.rightPlayer.cards.count{
+            return self.leftPlayer
+        }else if self.leftPlayer.cards.count < self.rightPlayer.cards.count{
+            return self.rightPlayer
+        }else{
+            return self.leftPlayer
+        }
     }
     
 
