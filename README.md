@@ -14,8 +14,11 @@ The Game is Played Automatically By The Computer.
 5. In a war, each player draws 3 cards from the top of their deck.
 6. The player with the higher card wins all the cards.
 7. If the cards are equal, the process is repeated until a player wins.
-8. The game ends when one player has all the cards.
+8. The game ends after 10 rounds or if player lost all his cards.
 9. You can pause the game at any time
+
+
+The game is using location to set the user position on the screen.
 
 
 ## Technologies
@@ -26,8 +29,12 @@ The Game is Played Automatically By The Computer.
 ## Light Mode
 
 
+  
 
-https://github.com/DanielBenAvi/war_cards_game/assets/94143762/ce72182f-237a-4a96-ba8e-109a761197f4
+
+https://github.com/user-attachments/assets/c449a9f2-e2f7-480f-8891-05eaf458dcd5
+
+
 
 
 
@@ -36,7 +43,10 @@ https://github.com/DanielBenAvi/war_cards_game/assets/94143762/ce72182f-237a-4a9
 
 
 
-https://github.com/DanielBenAvi/war_cards_game/assets/94143762/d9b20173-33fd-49c7-b46d-928648e16e94
+
+
+https://github.com/user-attachments/assets/3f8ade35-cdc4-4fba-a58c-aeeb048cad8b
+
 
 
 
