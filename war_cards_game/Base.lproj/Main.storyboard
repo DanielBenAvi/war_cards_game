@@ -21,6 +21,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet_left" translatesAutoresizingMaskIntoConstraints="NO" id="CD5-Es-yGQ">
+                                <rect key="frame" x="75" y="32" width="200" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="mJn-X2-gbd"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-AS-vci">
                                 <rect key="frame" x="326" y="261.66666666666669" width="200" height="34.333333333333314"/>
                                 <subviews>
@@ -64,21 +70,35 @@
                                     <action selector="UIButton_startGame:" destination="GRf-2H-w3Y" eventType="touchUpInside" id="F1o-cg-N9I"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet_right" translatesAutoresizingMaskIntoConstraints="NO" id="WKB-5g-zio">
+                                <rect key="frame" x="593" y="32" width="200" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KfU-do-4XP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FrL-rb-V1G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CD5-Es-yGQ" firstAttribute="leading" secondItem="FrL-rb-V1G" secondAttribute="leading" constant="16" id="0Ho-OW-hJd"/>
                             <constraint firstItem="QqT-Vi-Lcd" firstAttribute="centerX" secondItem="JNs-OM-Lsz" secondAttribute="centerX" id="0Kc-t3-3AB"/>
                             <constraint firstItem="FrL-rb-V1G" firstAttribute="bottom" secondItem="E1E-Z4-ghU" secondAttribute="bottom" constant="16" id="0Xm-Mz-JdE"/>
                             <constraint firstItem="E1E-Z4-ghU" firstAttribute="top" secondItem="EZf-AS-vci" secondAttribute="bottom" constant="16" id="9n5-z9-3Vq"/>
                             <constraint firstItem="E1E-Z4-ghU" firstAttribute="centerX" secondItem="JNs-OM-Lsz" secondAttribute="centerX" id="BrT-e3-VTp"/>
                             <constraint firstItem="QqT-Vi-Lcd" firstAttribute="top" secondItem="FrL-rb-V1G" secondAttribute="top" constant="20" id="FOm-wI-tpZ"/>
+                            <constraint firstItem="FrL-rb-V1G" firstAttribute="bottom" secondItem="WKB-5g-zio" secondAttribute="bottom" constant="32" id="IfY-zg-mne"/>
+                            <constraint firstItem="FrL-rb-V1G" firstAttribute="bottom" secondItem="CD5-Es-yGQ" secondAttribute="bottom" constant="32" id="JUg-O6-dij"/>
+                            <constraint firstItem="WKB-5g-zio" firstAttribute="top" secondItem="FrL-rb-V1G" secondAttribute="top" constant="32" id="lZx-pi-pGK"/>
                             <constraint firstItem="EZf-AS-vci" firstAttribute="centerX" secondItem="JNs-OM-Lsz" secondAttribute="centerX" id="uHF-Dk-Hfa"/>
+                            <constraint firstItem="CD5-Es-yGQ" firstAttribute="top" secondItem="FrL-rb-V1G" secondAttribute="top" constant="32" id="yGs-Co-pnz"/>
+                            <constraint firstItem="FrL-rb-V1G" firstAttribute="trailing" secondItem="WKB-5g-zio" secondAttribute="trailing" id="yVn-OO-uAe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Smk-RB-LIv"/>
                     <connections>
                         <outlet property="UIButton_setName" destination="SSV-0h-vA8" id="4xJ-zo-twe"/>
+                        <outlet property="UIImageView_leftErath" destination="CD5-Es-yGQ" id="9r7-5W-H3d"/>
+                        <outlet property="UIImageView_rightErath" destination="WKB-5g-zio" id="Itd-zu-6IF"/>
                         <outlet property="UIStackView_inputStack" destination="EZf-AS-vci" id="7dG-Cn-pd6"/>
                         <outlet property="UITextField_name" destination="YVB-d5-Glg" id="zWy-58-01a"/>
                         <outlet property="label_title" destination="QqT-Vi-Lcd" id="5cr-ga-u34"/>
@@ -258,6 +278,8 @@
         <image name="card-deck-left" width="512" height="512"/>
         <image name="card-deck-right" width="512" height="512"/>
         <image name="pause" width="24" height="24"/>
+        <image name="planet_left" width="256" height="512"/>
+        <image name="planet_right" width="256" height="512"/>
         <namedColor name="my_label_color">
             <color red="0.80000001192092896" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

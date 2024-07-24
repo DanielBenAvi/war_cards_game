@@ -21,6 +21,10 @@ class ViewControllerStart: UIViewController {
     
     @IBOutlet weak var UIStackView_inputStack: UIStackView!
     
+    @IBOutlet weak var UIImageView_leftErath: UIImageView!
+    
+    @IBOutlet weak var UIImageView_rightErath: UIImageView!
+    
     var name: String = ""
     
     let locationManager = CLLocationManager()
@@ -105,6 +109,14 @@ extension ViewControllerStart: CLLocationManagerDelegate {
         guard let locationValie: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         locationValue = locationValie
         
+        
+        if locationValue!.longitude > CENTER_Y_CONSTRAINT {
+            UIImageView_leftErath.isHidden = true
+            UIImageView_rightErath.isHidden = false
+        } else {
+            UIImageView_leftErath.isHidden = false
+            UIImageView_rightErath.isHidden = true
+        }
         
         
         print("locations = \(locationValie.latitude) \(locationValie.longitude)")
